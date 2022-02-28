@@ -1,29 +1,37 @@
-import React from 'react'
+import React from "react";
 
-const BigCard = ({ title, description, src, alt, isContact = false, titleh, descriptionh}) => {
+const BigCard = ({
+  title,
+  description,
+  src,
+  alt,
+  isContact = false,
+  titleh,
+  descriptionh,
+}) => {
   return (
     <div class="bigCard">
-        <div class="bigCard-left">
-             <img src={src} alt={alt} />
+      <div class="bigCard-left">
+        <img src={src} alt={alt} />
+      </div>
+      <div class="bigCard-right">
+        <div>
+          <h1>{title}</h1>
+          <div>
+            <p>{description}</p>
+          </div>
         </div>
-        <div class="bigCard-right">
+        {isContact ? (
+          <div>
+            <h1>{titleh}</h1>
             <div>
-            <h1>{title}</h1>
-            <div>
-                <p>{description}</p>
+              <p>{descriptionh}</p>
             </div>
-            {(isContact)?(
-                <>
-                    <h1>{titleh}</h1>
-                    <div>
-                        <p>{descriptionh}</p>
-                    </div>
-                </>
-            ):null}
-            </div>
-        </div>
+          </div>
+        ) : null}
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default BigCard;

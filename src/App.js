@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,19 +15,13 @@ import Cours from "./view/cours";
 import Menu from "./view/menu";
 
 export default function App() {
-  const [isConcept, setIsConcept]= useState(false);
-  const [isCours, setIsCours] = useState(false);
-  const [isContacte, setIsContacte] = useState(false);
-  const [isProduit, setIsProduit] = useState(false);
-
-
 
   return (
     <Router>
       <div >
         <nav className="navbar">
           <ul className="navbar-list">
-            <li className={(isConcept)?"navbar-item":"navbar-item actif"} onClick={() => setIsConcept(true)}>
+            <li className={"navbar-item"}>
               <Link to="/menu"><img src={menulogo} alt="boutton menu"/></Link>
             </li>
             <li className="navbar-title">
@@ -50,9 +44,4 @@ export default function App() {
       </div>
     </Router>
   );
-}
-
-
-function About() {
-  return <h2>About</h2>;
 }

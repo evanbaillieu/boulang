@@ -1,4 +1,5 @@
-import img from "../image/eclaire.jpeg";
+import eclaire from "../image/eclaire.jpeg";
+
 const fr = {
   contact: {
     title: "Nous contacter : ",
@@ -20,10 +21,12 @@ const fr = {
       "Encre et Levure organise parallèlement des cours de pâtisserie le vendredi de 16h00 à 18h00 par groupe de six maximums en compagnie de notre pâtissier. Ces séances vous permettront de réaliser, apprendre et déguster des productions sur le thème des tartelettes. Le savoir-faire est fait pour être partager.",
     img: "concept",
     content: [
-      { title: "eclaires", prix: 80, img: img, alt: "une image d'un eclaire" },
-      { title: "eclaires", prix: 80, img: img, alt: "une image d'un eclaire" },
-      { title: "eclaires", prix: 80, img: img, alt: "une image d'un eclaire" },
-      { title: "eclaires", prix: 80, img: img, alt: "une image d'un eclaire" },
+      { title: "eclaires", prix: 2, img: eclaire, alt: "une image d'un eclaire" },
+      { title: "Pain choco", prix: 0.80, img: eclaire, alt: "une image d'un eclaire" },
+      { title: "Sandwich", prix: 4, img: eclaire, alt: "une image d'un eclaire" },
+      { title: "Tarte noix", prix: 2, img: eclaire, alt: "une image d'un eclaire" },
+      { title: "Pains multigrains", prix: 2, img: eclaire, alt: "une image d'un eclaire" },
+      { title: "Saint honoré", prix: 10, img: eclaire, alt: "une image d'un eclaire" },
     ],
   },
   cours: {

@@ -1,6 +1,6 @@
 import React from 'react'
 import BigCard from '../components/bigCard';
-import image from '../image/boulanger.jpeg';
+import image from '../image/card.png';
 import { getLang } from '../lang';
 
 export default function Contact() {
