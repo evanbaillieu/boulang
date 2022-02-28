@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import Concept from "./view/concept";
+import Contact from "./view/contact";
+import Produits from "./view/produits";
+import './App.css'
+import Logo from "./logo.svg"
+import menulogo from "./image/svg/menu.svg"
+import Cours from "./view/cours";
+import Menu from "./view/menu";
 
-function App() {
+export default function App() {
+  const [isConcept, setIsConcept]= useState(false);
+  const [isCours, setIsCours] = useState(false);
+  const [isContacte, setIsContacte] = useState(false);
+  const [isProduit, setIsProduit] = useState(false);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div >
+        <nav className="navbar">
+          <ul className="navbar-list">
+            <li className={(isConcept)?"navbar-item":"navbar-item actif"} onClick={() => setIsConcept(true)}>
+              <Link to="/menu"><img src={menulogo} alt="boutton menu"/></Link>
+            </li>
+            <li className="navbar-title">
+              <Link to="/"><img src={Logo} height={30} width={200}/></Link>
+            </li>
+          </ul>
+        </nav>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <div className="corp">
+          <Routes>
+            <Route path="/contacte" element={<Contact/>}/>
+            <Route path="/cours" element={<Cours/>}/>
+            <Route path="/produits" element={<Produits/>}/>
+            <Route path={"/"} element={<Concept/>}/>
+            <Route path={"/menu"} element={<Menu/>}/>
+          </Routes>
+        </div>
+        
+      </div>
+    </Router>
   );
 }
 
-export default App;
+
+function About() {
+  return <h2>About</h2>;
+}

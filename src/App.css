@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body{
+  font-family: 'Rubik';
+  margin: 0;
+  padding: 0;
+}
+li{
+  font-family: 'Rubik';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  z-index: 100;
+  position: fixed;
+  top: 0%;
+  width: 100vw;
+  height: 7vh;
+  background-color: white;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-list{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+.navbar-list a{
+  outline: none;
+  text-decoration: none;
+  color: black;
+  font-family: 'Rubik';
+}
+
+.navbar-item{
+  margin-left: 1rem;
+  padding-top: 0.3rem;
+}
+.navbar-item:any-link{
+  border-bottom: 3px solid #6EBE48;
+}
+
+.navbar-title{
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 0.5rem;
+}
+
+.bigCard{
+  width: 70vw;
+  max-height: 727px;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  border-radius: 10%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.40);
+  
+}
+.bigCard-left{
+  height: 100%;
+  width: 60%;
+
+}
+
+
+.bigCard-right{
+  height: 100%;
+  background-color: white;
+  width: 40%;
+}
+.bigCard-left img{
+  height: 100%;
+  background-color: white;
+  max-width: 662px;
+  max-height: 727px;
+  width: 60vh;
+  border-radius: 20px 00px 0px 20px;
+  position: relative;
+}
+
+.corp{
+  margin-top: 5vh;
+  height: 85vh;
+  width: 100vw;
+}
+.produits{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.smalCard{
+  max-width: 350px;
+  max-height: 350px;
+  width: 80vw;
+  height: 80vh;
+  background-color: #6EBE48;
+  margin:20px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
-.App-link {
-  color: #61dafb;
+.smalCard-img{
+  height: 80%;
+  width: 350px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.smalCard_bootom{
+  display: flex;
+  justify-content: space-between;
+  margin:0 2rem 0 2rem;
+}
+
+.smalCard_bootom h4{
+  font-family: 'Rubik';
+  text-transform: capitalize;
+}
+.corp-menu{
+  width: 100vw;
+  height: 93vh;
+  margin-top: 7vh;
+  background-color: #6EBE48;
+  text-align: center;
+
+}
+.corp-menu nav{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.corp-menu li{
+  outline: none;
+  list-style: none;
+  margin: 10px;
+  padding: 5px;
+  border: 3px solid black;
+}
+
+.corp-menu a{
+  text-decoration: none;
+  outline: none;
+  color: black;
+  font-size: 54px;
+  
 }
