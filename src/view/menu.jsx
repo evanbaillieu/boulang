@@ -17,6 +17,9 @@ export default function Menu() {
             <li className={"navbar-item"}>
               <Link to="/produits">Nos Produits</Link>
             </li>
+            <li className={"navbar-item"}>
+              <Link to="/livre"> Nos Livre</Link>
+            </li>
         </nav>
     </div>
   )

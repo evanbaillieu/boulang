@@ -8,3 +8,11 @@ export const getLang = (lang) =>{
             return fr;
     }
 }
+
+export const getBoisson = (produits) =>{
+    return produits.boisson
+}
+
+export const getLivre = (produits) =>{
+    return produits.boisson
+}

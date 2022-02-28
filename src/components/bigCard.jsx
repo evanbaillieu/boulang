@@ -7,6 +7,7 @@ const BigCard = ({
   alt,
   isContact = false,
   titleh,
+  isDownload,
   descriptionh,
 }) => {
   return (
@@ -20,6 +21,11 @@ const BigCard = ({
           <div>
             <p>{description}</p>
           </div>
+          {isDownload ? (
+          <div class="btn-download"><a href="/download/carte.pdf" download>telecharger la carte</a></div>
+          
+        
+      ): (<></>)}
         </div>
         {isContact ? (
           <div>
